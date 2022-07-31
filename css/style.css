@@ -108,3 +108,27 @@ html {
 
 
 }
+.music-bar{
+    -webkit-appearance: none;
+    width: 100%;
+    position: absolute;
+    top: -40px;
+    height: 8px;
+    background: var(--secondary-color);
+    overflow: hidden;
+}
+.music-bar::-webkit-slider-thumb{
+     -webkit-appearance: none;
+     height: 18px;
+     width: 5px;
+     background: var(--primary-color);
+     cursor: pointer;
+     box-shadow: -400px 0 0px 400px var(--primary-color);
+}
+.current-song-name{
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
