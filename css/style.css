@@ -132,3 +132,38 @@ html {
     margin-top: 5px;
     text-transform: capitalize;
 }
+.controls{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 30px;
+
+}
+.controls span{
+    display: none;
+    opacity: 0;
+    transition: 1s;
+}
+.music-player .active .controls span{
+    font-size: 25px;
+    display: block;
+    opacity: 0.5;
+}
+.music-player .active .controls.active{
+    color: var(--primary-color);
+    opacity: 1;
+}
+.controls .main i{
+    margin: 0 5px;
+    display: none;
+}
+.controls .main i .active{
+    display: inline;
+}
+
+/* maximize player */
+
