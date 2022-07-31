@@ -48,122 +48,136 @@ html {
   box-shadow: var(--shadow);
   position: relative;
 }
-.carousel img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* opacity: 0; */
-    transition: 1s;
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* opacity: 0; */
+  transition: 1s;
 }
-.carousel img.active{
-    opacity: 1;
-
+.carousel img.active {
+  opacity: 1;
 }
-.heading{
-    margin: 30px 0 10px;
-    text-transform: capitalize;
-    font-weight: 400;
-    font-size: 30px;
-
+.heading {
+  margin: 30px 0 10px;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 30px;
 }
 /* playlist card */
-.playlists-group{
-    position: relative;
-    width: 100%;
-    min-height: 200px;
-    height: auto;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+.playlists-group {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
-.playlist-card{
-    flex:0 0 auto;
-    max-width: 150px;
-    height: 100%;
-    margin-right: 20px;
+.playlist-card {
+  flex: 0 0 auto;
+  max-width: 150px;
+  height: 100%;
+  margin-right: 20px;
 }
-.playlist-card-img{
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 20px;
+.playlist-card-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
 }
-.playlist-card-name{
-    width: 100%;
-    text-align: justify;
-    font-size: 20px;
-    text-transform: capitalize;
-    padding: 5px;
+.playlist-card-name {
+  width: 100%;
+  text-align: justify;
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 5px;
 }
-.music-player{
- width: 100%;
- height: 100px;
- position: fixed;
- bottom: 0;
- left: 0;
- background: var(--alpha-color);
- backdrop-filter: blur(50px);
- transition: 1s;
+.music-player-section {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: var(--alpha-color);
+  backdrop-filter: blur(50px);
+  transition: 1s;
+}
+.music-seek-bar {
+  -webkit-appearance: none;
+  width: 100%;
+  position: absolute;
+  top: -4px;
+  height: 9px;
+  background: var(--secondary-color);
+  overflow: hidden;
+}
+.music-seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 10px;
+  width: 5px;
+  background: var(--primary-color);
+  cursor: pointer;
+  box-shadow: -400px 0 0px 400px var(--primary-color);
+}
+.current-song-name {
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 5px;
+  text-transform: capitalize;
+}
+.controls {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 30px;
+}
+.controls span {
+  display: none;
+  opacity: 0;
+  transition: 1s;
+}
+.music-player-section .active .controls {
+  justify-content: space-between;
+}
+.music-player-section .active .controls span {
+  font-size: 25px;
+  display: block;
+  opacity: 0.5;
+}
+.music-player-section .active .controls span .active {
+  color: var(--primary-color);
+  opacity: 1;
+}
+.controls .main i {
+  /* margin: 0 5px; */
+  /* display: none; */
+}
+.controls .main i .active {
+  display: inline;
+}
 
-
-}
-.music-bar{
-    -webkit-appearance: none;
-    width: 100%;
-    position: absolute;
-    top: -40px;
-    height: 8px;
-    background: var(--secondary-color);
-    overflow: hidden;
-}
-.music-bar::-webkit-slider-thumb{
-     -webkit-appearance: none;
-     height: 18px;
-     width: 5px;
-     background: var(--primary-color);
-     cursor: pointer;
-     box-shadow: -400px 0 0px 400px var(--primary-color);
-}
-.current-song-name{
-    text-align: center;
-    font-weight: 300;
-    font-size: 20px;
-    margin-top: 5px;
-    text-transform: capitalize;
-}
-.controls{
-    position: relative;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 30px;
-
-}
-.controls span{
+/* maximize player */
+.music-player-section .hide{
     display: none;
     opacity: 0;
     transition: 1s;
 }
-.music-player .active .controls span{
-    font-size: 25px;
-    display: block;
-    opacity: 0.5;
-}
-.music-player .active .controls.active{
-    color: var(--primary-color);
+.music-player-section .active.hide{
+      display: block;
     opacity: 1;
+   
 }
-.controls .main i{
-    margin: 0 5px;
-    display: none;
+.music-player-section .active{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
 }
-.controls .main i .active{
-    display: inline;
-}
-
-/* maximize player */
-

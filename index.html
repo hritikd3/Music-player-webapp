@@ -9,9 +9,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      
     />
   </head>
   <body>
@@ -116,22 +114,24 @@
         </div>
       </div>
     </section>
-    <section class="music-player active">
-        <h1 class="current-song-name">song 1</h1>
-<div class="seek-bar">
-    <input type="range" class="music-bar" value="0">
-</div>
-<div class="controls">
-    <span class="fas fa redo">
-        <div class="main">
-            <i class="fas fa-backward active"></i>
-            <i class="fas fa-play active"></i>
-            <i class="fas fa-pause active"></i>
-            <i class="fas fa-forwards-up active"></i>
-        </div>
-    </span>
-</div>
 
+    <section class="music-player-section active">
+      <h1 class="current-song-name">song 1</h1>
+      <div class="seek-bar-container">
+        <input type="range" class="music-seek-bar" value="0" > </input>
+      </div>
+
+      <div class="controls">
+        <span class="fas fa-redo"></span>
+    
+        <div class="main">
+        <i class="fas fa-backward active"></i>
+          <i class="fas fa-play active"></i>
+          <i class="fas fa-pause"></i>
+          <i class="fas fa-forward active"></i>
+        </div>
+        <span class="fas fa-volume-up"></span>
+      </div>
     </section>
     <script src="data.js" />
     <script src="app.js" />
